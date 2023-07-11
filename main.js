@@ -1,13 +1,13 @@
 
 function calcular(operador, num1, num2) {
   switch (operador) {
-    case '+':
+    case "+":
       return num1 + num2;
-    case '-':
+    case "-":
       return num1 - num2;
-    case '*':
+    case "*":
       return num1 * num2;
-    case '/':
+    case "/":
       if (num2 !== 0) {
         return num1 / num2;
       } else {
@@ -18,10 +18,14 @@ function calcular(operador, num1, num2) {
   }
 }
 
+let rta = ""
+do {
+  let num1 = Number((prompt("Ingrese el primer número:")));
+  let operador = prompt("Ingrese la operación a realizar");
+  let num2 = Number((prompt("Ingrese el segundo número:")));
+  let resultado = calcular(operador, num1, num2)
+  alert(resultado)
+  rta = prompt("¿Desea Salir?(Escriba 'ESC' para salir)").toUpperCase()
+} while (rta != "ESC")
 
-let numero1 = Number(prompt("Ingrese el primer número:"));
-let operacion = prompt("Ingrese la operación a realizar (+, -, *, /):");
-let numero2 = Number(prompt("Ingrese el segundo número:"));
 
-let resultado = calcular(operacion, numero1, numero2);
-alert("El resultado es: " + resultado);
