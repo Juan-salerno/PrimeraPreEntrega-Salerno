@@ -21,7 +21,7 @@ function calcular(operador, num1, num2) {
 let rta = ""
 do {
   let num1 = Number((prompt("Ingrese el primer número:")));
-  let operador = prompt("Ingrese la operación a realizar");
+  let operador = prompt("Ingrese la operación a realizar +, -, *, /");
   let num2 = Number((prompt("Ingrese el segundo número:")));
   let resultado = calcular(operador, num1, num2)
   alert(resultado)
